@@ -119,11 +119,6 @@
                         '<link rel="stylesheet" href="css/my-app.ios.css">'
                     );
                 }
-                //window.plugins.uniqueDeviceID.get(success, fail);
-                //function success(uuid)
-                //{
-                //    alert(uuid);
-                //};
             })();
         </script>
         <!-- Path to your app js-->
@@ -131,19 +126,24 @@
         <script>
             document.addEventListener("deviceready", onDeviceReady, false);
  
-            function onDeviceReady() {
+            function onDeviceReady()
+            {
                 window.plugins.sim.getSimInfo(successCallback, errorCallback);
+                window.plugins.uniqueDeviceID.get(success, errorCallback);
             }
 
-            function successCallback(result) {
+            function successCallback(result)
+            {
                 alert(JSON.stringify(result));
-                window.plugins.uniqueDeviceID.get(success, fail);
             }
+            
             function success(uuid)
             {
                 alert(uuid);
-            };
-            function errorCallback(error) {
+            }
+            
+            function errorCallback(error)
+            {
               alert(error);
             }
         </script>
