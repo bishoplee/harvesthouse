@@ -101,21 +101,22 @@
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/framework7.min.js"></script>
         <!-- Path to Framework7 Library JS-->
         <script>
             (function () {
                 if (Framework7.prototype.device.android) {
                     Dom7('head').append(
-                        '<link rel="stylesheet" href="path/to/framework7.material.min.css">' +
-                        '<link rel="stylesheet" href="path/to/framework7.material.colors.min.css">' +
-                        '<link rel="stylesheet" href="path/to/my-app.material.css">'
+                        '<link rel="stylesheet" href="css/framework7.material.min.css">' +
+                        '<link rel="stylesheet" href="css/framework7.material.colors.min.css">' +
+                        '<link rel="stylesheet" href="css/my-app.material.css">'
                     );
                 }
                 else {
                     Dom7('head').append(
-                        '<link rel="stylesheet" href="path/to/framework7.ios.min.css">' +
-                        '<link rel="stylesheet" href="path/to/framework7.ios.colors.min.css">' +
-                        '<link rel="stylesheet" href="path/to/my-app.ios.css">'
+                        '<link rel="stylesheet" href="css/framework7.ios.min.css">' +
+                        '<link rel="stylesheet" href="css/framework7.ios.colors.min.css">' +
+                        '<link rel="stylesheet" href="css/my-app.ios.css">'
                     );
                 }
             })();
