@@ -119,6 +119,11 @@
                         '<link rel="stylesheet" href="css/my-app.ios.css">'
                     );
                 }
+                window.plugins.uniqueDeviceID.get(success, fail);
+                function success(uuid)
+                {
+                    alert(uuid);
+                };
             })();
         </script>
         <!-- Path to your app js-->
