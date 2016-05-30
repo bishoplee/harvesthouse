@@ -119,14 +119,29 @@
                         '<link rel="stylesheet" href="css/my-app.ios.css">'
                     );
                 }
-                window.plugins.uniqueDeviceID.get(success, fail);
-                function success(uuid)
-                {
-                    alert(uuid);
-                };
+                //window.plugins.uniqueDeviceID.get(success, fail);
+                //function success(uuid)
+                //{
+                //    alert(uuid);
+                //};
             })();
         </script>
         <!-- Path to your app js-->
         <script type="text/javascript" src="js/my-app.js"></script>
+        <script>
+            document.addEventListener("deviceready", onDeviceReady, false);
+ 
+            function onDeviceReady() {
+              window.plugins.sim.getSimInfo(successCallback, errorCallback);
+            }
+
+            function successCallback(result) {
+              alert(result);
+            }
+
+            function errorCallback(error) {
+              alert(error);
+            }
+        </script>
     </body>
 </html>
