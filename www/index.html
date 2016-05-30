@@ -132,13 +132,17 @@
             document.addEventListener("deviceready", onDeviceReady, false);
  
             function onDeviceReady() {
-              window.plugins.sim.getSimInfo(successCallback, errorCallback);
+                window.plugins.sim.getSimInfo(successCallback, errorCallback);
+                window.plugins.uniqueDeviceID.get(success, fail);
             }
 
             function successCallback(result) {
               alert(JSON.stringify(result));
             }
-
+            function success(uuid)
+            {
+                console.log(uuid);
+            };
             function errorCallback(error) {
               alert(error);
             }
